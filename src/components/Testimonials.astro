@@ -1,15 +1,220 @@
----
----
-<section class="container mx-auto px-6 py-20 space-y-12">
-  <h2 class="text-4xl font-sans font-bold text-text-dark text-center">Testimoni</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-bg-alt p-8 rounded-3xl space-y-4">
-      <div class="text-primary text-2xl font-bold">5.0 ★★★★★</div>
-      <p class="text-text-muted">Sangat memuaskan!</p>
+<section class="w-full py-45 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 space-y-12">
+    
+    <!-- Top Header Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start border-b border-gray-100 pb-10">
+      
+      <!-- Left Column: Title -->
+      <div class="lg:col-span-6 space-y-4 text-left">
+        <div class="flex items-center gap-1.5 text-lg md:text-xl font-bold uppercase tracking-wide text-black select-none">
+          <span>Testimoni</span>
+          <span class="text-[#0066FF] font-sans font-extrabold text-xl">↗</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-black leading-tight tracking-tight uppercase">
+          Testimoni : Di percaya<br />oleh client kami
+        </h2>
+      </div>
+
+      <!-- Right Column: Subtitle & CTA -->
+      <div class="lg:col-span-6 flex flex-col items-start gap-6 text-left">
+        <p class="text-lg md:text-xl text-black font-semibold leading-relaxed">
+          di bawah ini adalah testimoni dari beberapa brand yang telah menjalin kerjasama dengan PT ANSEL untuk mendevelop produk mereka.
+        </p>
+      </div>
+
     </div>
-    <div class="bg-bg-alt p-8 rounded-3xl space-y-4">
-      <p class="text-text-muted italic">"Produk berkualitas tinggi."</p>
-      <p class="font-bold text-text-dark">- Labib Luthfi</p>
+
+    <!-- Main Content Section (Cards Grid) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Left Card: Rating Card (Blue) -->
+      <div class="lg:col-span-4 bg-[#0066FF] text-white rounded-[30px] p-8 md:p-10 flex flex-col items-center justify-between text-center min-h-[470px] shadow-lg">
+        
+        <!-- Rating Big Number -->
+        <div class="text-[96px] font-black leading-none drop-shadow-md select-none font-sans">
+          5.0
+        </div>
+
+        <!-- Rating Stars -->
+        <div class="flex items-center justify-center gap-1.5 text-2xl text-white select-none mt-2">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <!-- Review Count -->
+        <div class="text-xl font-semibold opacity-90 tracking-wide mt-2">
+          ( 40+ Reviews )
+        </div>
+
+        <!-- Experience Text -->
+        <p class="text-xl md:text-2xl font-bold leading-snug max-w-[260px] flex-grow flex items-center justify-center mt-6">
+          Pengalaman partner kami yang bicara sendiri
+        </p>
+
+        <!-- Dynamic Avatar Display -->
+        <div class="flex items-center justify-center mt-8 select-none">
+          <img 
+            id="testimonial-avatar"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" 
+            alt="Active Client" 
+            class="w-[100px] h-[100px] rounded-full border-4 border-white object-cover bg-white shadow-md transition-all duration-300 transform opacity-100 scale-100"
+          />
+        </div>
+
+      </div>
+
+      <!-- Right Card: Testimonial Slider Card (Light Gray) -->
+      <div class="lg:col-span-8 bg-[#F5F5F5] rounded-[30px] p-8 md:p-12 flex flex-col justify-between min-h-[470px] relative shadow-inner border border-gray-100">
+        
+        <!-- Header Star Rating with blue stars and text -->
+        <div class="flex items-center gap-2 mb-8 select-none">
+          <div class="flex gap-1 text-[#0066FF] text-2xl">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <span class="text-3xl font-bold text-black font-sans ml-1">5.0</span>
+        </div>
+
+        <!-- Testimonial Text Area -->
+        <div class="flex-grow flex items-center">
+          <p 
+            id="testimonial-text" 
+            class="text-black text-xl md:text-2xl font-semibold leading-relaxed max-w-3xl transition-all duration-300 opacity-100 transform translate-y-0"
+          >
+            di bawah ini adalah testimoni dari beberapa brand yang telah menjalin kerjasama dengan PT ANSEL untuk mendevelop produk mereka.
+          </p>
+        </div>
+
+        <!-- Bottom Row: Author details & Slider buttons -->
+        <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mt-10">
+          
+          <!-- Author Info -->
+          <div class="text-left select-none">
+            <span 
+              id="testimonial-name" 
+              class="text-2xl font-extrabold text-black block transition-all duration-300 opacity-100"
+            >
+              Labib Luthfi
+            </span>
+            <span 
+              id="testimonial-role" 
+              class="text-lg font-bold text-black/60 block mt-1 uppercase tracking-wide transition-all duration-300 opacity-100"
+            >
+              CEO PT TECHNOLOGI INDONESIA
+            </span>
+          </div>
+
+          <!-- Slide Controls -->
+          <div class="flex items-center gap-4 select-none shrink-0 self-end md:self-auto">
+            <!-- Prev Button -->
+            <button 
+              id="testi-prev-btn" 
+              class="w-12 h-12 rounded-full bg-[#0066FF] hover:bg-blue-600 active:scale-90 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md"
+              aria-label="Previous Testimonial"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            
+            <!-- Next Button -->
+            <button 
+              id="testi-next-btn" 
+              class="w-12 h-12 rounded-full bg-[#0066FF] hover:bg-blue-600 active:scale-90 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md"
+              aria-label="Next Testimonial"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 </section>
+
+<script>
+  function initTestimonialsSlider() {
+    const avatarEl = document.getElementById('testimonial-avatar') as HTMLImageElement;
+    const textEl = document.getElementById('testimonial-text');
+    const nameEl = document.getElementById('testimonial-name');
+    const roleEl = document.getElementById('testimonial-role');
+    const prevBtn = document.getElementById('testi-prev-btn');
+    const nextBtn = document.getElementById('testi-next-btn');
+
+    if (!textEl || !nameEl || !roleEl || !avatarEl) return;
+
+    // Testimonials Data Array
+    const testimonials = [
+      {
+        text: "di bawah ini adalah testimoni dari beberapa brand yang telah menjalin kerjasama dengan PT ANSEL untuk mendevelop produk mereka.",
+        name: "Labib Luthfi",
+        role: "CEO PT TECHNOLOGI INDONESIA",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
+      },
+      {
+        text: "Sangat terbantu dengan tim formulator kosmetik di PT Ansel Muda Berkarya. Kami berhasil meluncurkan rangkaian serum wajah terlaris dengan formulasi eksklusif dalam waktu 1 bulan!",
+        name: "Budi Santoso",
+        role: "Founder Santoso Glow",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces"
+      },
+      {
+        text: "Sebagai brand lokal baru wewangian premium, PT ANSEL adalah partner manufaktur impian kami. Timnya responsif, MOQ-nya sangat bersahabat, dan kualitas aromanya luar biasa tahan lama.",
+        name: "Clara Angelica",
+        role: "Managing Director Angelica Perfumes",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces"
+      }
+    ];
+
+    let currentIdx = 0;
+    const totalTestimonials = testimonials.length;
+
+    function updateTestimonial(idx: number) {
+      // 1. Fade out transition (exit animation)
+      avatarEl!.style.opacity = '0';
+      avatarEl!.style.transform = 'scale(0.8)';
+      textEl!.style.opacity = '0';
+      textEl!.style.transform = 'translateY(10px)';
+      nameEl!.style.opacity = '0';
+      nameEl!.style.transform = 'translateY(5px)';
+      roleEl!.style.opacity = '0';
+      roleEl!.style.transform = 'translateY(5px)';
+
+      setTimeout(() => {
+        // 2. Set new content
+        const item = testimonials[idx];
+        avatarEl!.src = item.avatar;
+        textEl!.textContent = item.text;
+        nameEl!.textContent = item.name;
+        roleEl!.textContent = item.role;
+
+        // 3. Fade in transition (entry animation)
+        avatarEl!.style.opacity = '1';
+        avatarEl!.style.transform = 'scale(1)';
+        textEl!.style.opacity = '1';
+        textEl!.style.transform = 'translateY(0)';
+        nameEl!.style.opacity = '1';
+        nameEl!.style.transform = 'translateY(0)';
+        roleEl!.style.opacity = '1';
+        roleEl!.style.transform = 'translateY(0)';
+      }, 250); // half of the duration
+    }
+
+    prevBtn?.addEventListener('click', () => {
+      currentIdx = (currentIdx - 1 + totalTestimonials) % totalTestimonials;
+      updateTestimonial(currentIdx);
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      currentIdx = (currentIdx + 1) % totalTestimonials;
+      updateTestimonial(currentIdx);
+    });
+  }
+
+  // Bind init functions on different lifecycle events
+  document.addEventListener('DOMContentLoaded', initTestimonialsSlider);
+  document.addEventListener('astro:page-load', initTestimonialsSlider);
+</script>
