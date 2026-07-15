@@ -1,0 +1,109 @@
+<section class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
+  <div class="flex-1 space-y-6 -translate-y-16 md:-translate-y-28">
+    <div class="flex items-center gap-2 text-primary animate-fade-in-up">
+            <img src="/bintang.svg" alt="petunjuk" width="20" height="20" />
+      <span class="font-sans font-semibold">Bangun Pengalaman Brand Kamu</span>
+    </div>
+    <h1 class="text-6xl font-sans font-bold text-text-dark leading-tight animate-fade-in-up delay-100">
+      CIPTAKAN PRODUK IMPIAN BERSAMA KAMI
+    </h1>
+    <p class="text-xl text-text-muted leading-relaxed animate-fade-in-up delay-200">
+      Mitra manufaktur strategis terpercaya di Indonesia. Kami siap mewujudkan brand kecantikan impian Anda dengan standar produksi, keamanan, dan kualitas terbaik (BPOM Certified).
+    </p>
+    <div class="flex items-center gap-8 pt-4 animate-fade-in-up delay-300" id="button-container">
+      <a href="/explore" class="hero-btn group bg-primary text-white px-8 py-3 rounded-full font-sans flex items-center gap-3 font-semibold transition-all duration-300 active-btn">
+        Explore More
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/services" class="hero-btn group text-text-dark px-8 py-3 rounded-full font-sans flex items-center gap-2 font-semibold transition-all duration-300">
+        View All Service
+        <svg width="24" height="24" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform group-hover:translate-x-1">
+          <path d="M16.4062 5.25V13.7812C16.4062 13.9553 16.3371 14.1222 16.214 14.2453C16.091 14.3684 15.924 14.4375 15.75 14.4375C15.576 14.4375 15.409 14.3684 15.286 14.2453C15.1629 14.1222 15.0937 13.9553 15.0937 13.7812V6.83402L5.7143 16.2143C5.59116 16.3374 5.42414 16.4066 5.25 16.4066C5.07585 16.4066 4.90884 16.3374 4.7857 16.2143C4.66256 16.0912 4.59338 15.9241 4.59338 15.75C4.59338 15.5759 4.66256 15.4088 4.7857 15.2857L14.166 5.90625H7.21875C7.0447 5.90625 6.87778 5.83711 6.75471 5.71404C6.63164 5.59097 6.5625 5.42405 6.5625 5.25C6.5625 5.07595 6.63164 4.90903 6.75471 4.78596C6.87778 4.66289 7.0447 4.59375 7.21875 4.59375H15.75C15.924 4.59375 16.091 4.66289 16.214 4.78596C16.3371 4.90903 16.4062 5.07595 16.4062 5.25Z" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+
+<script>
+  const buttons = document.querySelectorAll('.hero-btn');
+  
+  buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      buttons.forEach(b => b.classList.remove('active-btn', 'bg-primary', 'text-white'));
+      buttons.forEach(b => b.classList.add('text-text-dark'));
+      button.classList.add('active-btn', 'bg-primary', 'text-white');
+      button.classList.remove('text-text-dark');
+    });
+  });
+</script>
+
+<style>
+  .hero-btn {
+    border: 2px solid transparent;
+  }
+  .active-btn {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+  }
+  /* Ensure text color is managed correctly */
+  .hero-btn:not(.active-btn) {
+    color: #374151; /* text-text-dark */
+  }
+</style>
+  </div>
+  <div class="flex-1 animate-fade-in-up delay-400">
+    <!-- Wrapper untuk menentukan posisi & jalannya animasi melayang (float) secara smooth -->
+    <div class="w-full max-w-[560px] mx-auto md:ml-auto -translate-y-4 md:-translate-y-17 animate-float">
+      <!-- Menggunakan foto asli /lab.png yang transparan tanpa background putih -->
+      <!-- Menggunakan drop-shadow khusus PNG (filter drop-shadow) agar bayangan mengikuti lekukan botol & kaca -->
+      <img 
+        src="/lab.png" 
+        alt="Hero" 
+        class="w-full h-auto cursor-pointer select-none transition-all duration-300 hover:scale-105 active:scale-95 drop-shadow-[0_10px_20px_rgba(59,130,246,0.12)] hover:drop-shadow-[0_20px_35px_rgba(59,130,246,0.25)]" 
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+</style>
