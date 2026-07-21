@@ -1,78 +1,108 @@
-<section class="max-w-7xl mx-auto px-6 py-20 text-center">
-  <div style="width: 1044px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 44px; display: inline-flex">
+<section class="max-w-7xl mx-auto px-6 py-20 w-full overflow-hidden">
+  <div class="flex flex-col items-center gap-12 text-center">
     
-    <div style="width: 601px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-      <div style="justify-content: flex-start; align-items: center; gap: 6px; display: inline-flex">
-        <div style="text-align: justify; color: black; font-size: 22px; font-family: Archivo; font-weight: 600; word-wrap: break-word">Alur layanan kami</div>
-        <div style="width: 24px; height: 24px; position: relative; overflow: hidden">
-        <img src="/miring.svg" alt="petunjuk" width="24" height="24" />
-        </div>
+    <!-- Header -->
+    <div class="flex flex-col items-center gap-3">
+      <div class="flex items-center gap-2">
+        <span class="text-black text-xl font-semibold font-archivo">Alur layanan kami</span>
+        <img src="/miring.svg" alt="petunjuk" class="w-6 h-6" />
       </div>
-      <div style="align-self: stretch; text-align: center; color: black; font-size: 40px; font-family: Archivo; font-weight: 700; text-transform: uppercase; word-wrap: break-word">8 alur maklon <br/>pt ansel muda berkarya</div>
-    </div> 
+      <h2 class="text-4xl font-bold font-archivo text-black uppercase">8 alur maklon <br/>pt ansel muda berkarya</h2>
+    </div>
 
-    <div style="align-self: stretch; justify-content: flex-start; align-items: center; display: inline-flex">
-      <div style="width: 522px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-        <div style="align-self: stretch; height: 283px; position: relative; overflow: hidden; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-left-radius: 30px; outline: 4px #1070FF solid; outline-offset: -4px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: #1070FF; overflow: hidden; border-radius: 50px">
-            <img src="/putih.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: black; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Konsultasi awal</div>
-          <div style="width: 431px; left: 45px; top: 121px; position: absolute; color: black; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl" id="process-cards">
+      <!-- Item 1 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] border-4 border-[#1070FF] gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-[#1070FF] rounded-full flex items-center justify-center">
+          <img src="/putih.svg" class="w-10 h-10" alt="Icon" />
         </div>
-        <div style="align-self: stretch; height: 283px; position: relative; background: #1070FF; overflow: hidden; border-top-left-radius: 30px; border-bottom-left-radius: 30px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: white; overflow: hidden; border-radius: 50px">
-            <img src="/biru.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: white; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Umpan balik & revisi</div>
-          <div style="width: 431px; left: 44px; top: 121px; position: absolute; color: white; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
-        </div>
-        <div style="align-self: stretch; height: 283px; position: relative; overflow: hidden; border-top-left-radius: 30px; border-bottom-left-radius: 30px; outline: 4px #1070FF solid; outline-offset: -4px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: #1070FF; overflow: hidden; border-radius: 50px">
-            <img src="/putih.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: black; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Perizinan & legalitas</div>
-          <div style="width: 431px; left: 44px; top: 121px; position: absolute; color: black; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
-        </div>
-        <div style="align-self: stretch; height: 283px; position: relative; background: #1070FF; overflow: hidden; border-top-left-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: white; overflow: hidden; border-radius: 50px">
-            <img src="/biru.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: white; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Pengemasan & pengiriman</div>
-          <div style="width: 431px; left: 44px; top: 121px; position: absolute; color: white; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
-        </div>
+        <h3 class="text-2xl font-bold font-archivo">Konsultasi awal</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
       </div>
 
-      <div style="width: 522px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-        <div style="align-self: stretch; height: 283px; position: relative; background: #1070FF; overflow: hidden; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: white; overflow: hidden; border-radius: 50px">
-            <img src="/biru.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: white; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Formulasi sample</div>
-          <div style="width: 431px; left: 44px; top: 121px; position: absolute; color: white; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
+      <!-- Item 2 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] bg-[#1070FF] text-white gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+          <img src="/biru.svg" class="w-10 h-10" alt="Icon" />
         </div>
-        <div style="align-self: stretch; height: 283px; position: relative; overflow: hidden; border-top-right-radius: 30px; border-bottom-right-radius: 30px; outline: 4px #1070FF solid; outline-offset: -4px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: #1070FF; overflow: hidden; border-radius: 50px">
-            <img src="/putih.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: black; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Design & kemasan</div>
-          <div style="width: 431px; left: 44px; top: 121px; position: absolute; color: black; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
+        <h3 class="text-2xl font-bold font-archivo">Umpan balik & revisi</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] border-4 border-[#1070FF] gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-[#1070FF] rounded-full flex items-center justify-center">
+          <img src="/putih.svg" class="w-10 h-10" alt="Icon" />
         </div>
-        <div style="align-self: stretch; height: 283px; position: relative; background: #1070FF; overflow: hidden; border-top-right-radius: 30px; border-bottom-right-radius: 30px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: white; overflow: hidden; border-radius: 50px">
-            <img src="/biru.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: white; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Produksi massal</div>
-          <div style="width: 431px; left: 44px; top: 121px; position: absolute; color: white; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
+        <h3 class="text-2xl font-bold font-archivo">Perizinan & legalitas</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] bg-[#1070FF] text-white gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+          <img src="/biru.svg" class="w-10 h-10" alt="Icon" />
         </div>
-        <div style="align-self: stretch; height: 283px; position: relative; overflow: hidden; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; outline: 4px #1070FF solid; outline-offset: -4px">
-          <div style="width: 65px; height: 65px; left: 44px; top: 34px; position: absolute; background: #1070FF; overflow: hidden; border-radius: 50px">
-            <img src="/putih.svg" style="width: 39px; height: 39px; left: 13px; top: 13px; position: absolute;" alt="Icon" />
-          </div>
-          <div style="left: 125px; top: 53px; position: absolute; color: black; font-size: 26px; font-family: Archivo; font-weight: 700; word-wrap: break-word">Siap di pasarkan</div>
-          <div style="width: 431px; left: 44px; top: 121px; position: absolute; color: black; font-size: 20px; font-family: Archivo; font-weight: 400; line-height: 28px; word-wrap: break-word">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</div>
+        <h3 class="text-2xl font-bold font-archivo">Pengemasan & pengiriman</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] bg-[#1070FF] text-white gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+          <img src="/biru.svg" class="w-10 h-10" alt="Icon" />
         </div>
+        <h3 class="text-2xl font-bold font-archivo">Formulasi sample</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] border-4 border-[#1070FF] gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-[#1070FF] rounded-full flex items-center justify-center">
+          <img src="/putih.svg" class="w-10 h-10" alt="Icon" />
+        </div>
+        <h3 class="text-2xl font-bold font-archivo">Design & kemasan</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] bg-[#1070FF] text-white gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+          <img src="/biru.svg" class="w-10 h-10" alt="Icon" />
+        </div>
+        <h3 class="text-2xl font-bold font-archivo">Produksi massal</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="process-card relative flex flex-col p-8 rounded-[30px] border-4 border-[#1070FF] gap-4 text-left opacity-0 translate-y-10 transition-all duration-700">
+        <div class="w-16 h-16 bg-[#1070FF] rounded-full flex items-center justify-center">
+          <img src="/putih.svg" class="w-10 h-10" alt="Icon" />
+        </div>
+        <h3 class="text-2xl font-bold font-archivo">Siap di pasarkan</h3>
+        <p class="text-lg font-archivo">Tim R&D kami mengembangkan formulasi awal berdasarkan kebutuhan, konsep, serta tren terkini agar hasilnya tidak hanya efektif, tetapi juga sesuai dengan karakter brand Anda.</p>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        entry.target.classList.remove('opacity-0', 'translate-y-10');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.process-card').forEach((card) => {
+    observer.observe(card);
+  });
+</script>

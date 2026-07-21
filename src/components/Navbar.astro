@@ -1,5 +1,4 @@
-
-<nav id="main-navbar" class="sticky top-0 z-50 bg-transparent border-b border-transparent transition-all duration-300">
+<nav id="main-navbar" class="sticky top-0 z-50 bg-transparent border-b border-transparent transition-all duration-300" x-data="{ open: false }">
   <div class="container mx-auto px-6 py-4 flex items-center justify-between">
     <div class="flex items-center gap-1">
         <img src="/a.svg" alt="A" class="h-8 w-auto" />
@@ -8,38 +7,41 @@
             PT<br/>ANSEL<br/>MUDA<br/>BERKARYA
         </div>
     </div>
+    
+    <!-- Desktop Menu -->
     <div class="hidden md:flex items-center gap-6 font-sans text-text-dark font-basic text-lg">
-      <a href="/" class="relative group text-text-dark hover:text-primary transition-colors">
-        BERANDA
-        <span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </a>
-      <a href="/about" class="relative group text-text-muted hover:text-primary transition-colors">
-        TENTANG KAMI
-        <span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </a>
-      <a href="/partnership" class="relative group text-text-muted hover:text-primary transition-colors">
-        PARTNERSHIP
-        <span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </a>
-      <a href="/services" class="relative group text-text-muted hover:text-primary transition-colors">
-        LAYANAN
-        <span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </a>
-      <a href="/careers" class="relative group text-text-muted hover:text-primary transition-colors">
-        CAREERS
-        <span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </a>
-      <a href="/lang" class="relative group text-text-muted hover:text-primary transition-colors">
-        BAHASA
-        <span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </a>
+      <a href="/" class="relative group text-text-dark hover:text-primary transition-colors">BERANDA<span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+      <a href="/about" class="relative group text-text-muted hover:text-primary transition-colors">TENTANG KAMI<span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+      <a href="/#partners" class="relative group text-text-muted hover:text-primary transition-colors">PARTNERSHIP<span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+      <a href="/services" class="relative group text-text-muted hover:text-primary transition-colors">LAYANAN<span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+      <a href="/careers" class="relative group text-text-muted hover:text-primary transition-colors">CAREERS<span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+      <a href="/lang" class="relative group text-text-muted hover:text-primary transition-colors">BAHASA<span class="absolute left-0 -bottom-1 h-0.5 w-full bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
     </div>
-    <a href="/contact" class="text-primary font-sans flex items-center gap-2 hover:underline">
+
+    <!-- Mobile Toggle -->
+    <button @click="open = !open" class="md:hidden p-2 text-text-dark focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    </button>
+
+    <a href="/contact" class="hidden md:flex text-primary font-sans items-center gap-2 hover:underline">
         KONTAK KAMI
         <img src="/miring.svg" alt="petunjuk" width="24" height="24" />
     </a>
   </div>
+
+  <!-- Mobile Menu -->
+  <div x-show="open" class="md:hidden bg-white border-t border-gray-200 p-6 space-y-4 font-sans text-text-dark text-lg" @click.away="open = false">
+    <a href="/" class="block">BERANDA</a>
+    <a href="/about" class="block">TENTANG KAMI</a>
+    <a href="/#partners" class="block">PARTNERSHIP</a>
+    <a href="/services" class="block">LAYANAN</a>
+    <a href="/careers" class="block">CAREERS</a>
+    <a href="/lang" class="block">BAHASA</a>
+    <a href="/contact" class="block text-primary font-bold">KONTAK KAMI</a>
+  </div>
 </nav>
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <script>
   const navbar = document.getElementById('main-navbar');
@@ -53,11 +55,7 @@
         navbar.classList.add('bg-transparent', 'border-transparent');
       }
     };
-
-    // Run once on load to set the initial state
     handleScroll();
-
-    // Listen to scroll events
     window.addEventListener('scroll', handleScroll);
   }
 </script>

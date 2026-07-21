@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Tentang Kami - PT Ansel Muda Berkarya">
+  <Navbar />
+  <main>
+    <!-- Section 1: Profil & Visi Misi (Hero Dark Theme) -->
+    <section 
+      class="relative min-h-screen flex flex-col justify-center py-16 overflow-hidden bg-black"
+      x-data="{ 
+            mainImage: '/masnu.svg', 
+            thumbnails: ['/produksi.svg', '/mixing.svg', '/korea.svg'],
+            swapImage(index) {
+                let temp = this.mainImage;
+                this.mainImage = this.thumbnails[index];
+                this.thumbnails[index] = temp;
+            }
+      }"
+    >
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="/pt.svg" alt="background" class="w-full h-full object-cover opacity-40" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-6 w-full">
+        <h1 class="text-white text-3xl md:text-5xl font-bold mb-10 tracking-tight uppercase">TENTANG KAMI</h1>
+
+        <div class="grid lg:grid-cols-12 gap-8 xl:gap-12 items-start">
+          <!-- Left side: Images -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl border border-white/10">
+              <img 
+                :src="mainImage" 
+                alt="Main Image" 
+                class="w-full h-full object-cover transition-all duration-500" 
+                :key="mainImage"
+              />
+            </div>
+            
+            <div class="grid grid-cols-3 gap-3">
+              <template x-for="(img, index) in thumbnails" :key="index">
+                <button 
+                  @click="swapImage(index)" 
+                  class="rounded-2xl overflow-hidden aspect-square border-2 border-white/10 hover:border-primary transition-colors focus:outline-none bg-white/5"
+                >
+                  <img :src="img" alt="Thumbnail" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                </button>
+              </template>
+            </div>
+          </div>
+
+          <!-- Right side: Text Content -->
+          <div class="lg:col-span-7 text-white space-y-6">
+            <div>
+              <h2 class="text-xl font-bold tracking-widest uppercase">PROFIL PERUSAHAAN</h2>
+              <div class="h-0.5 w-24 bg-white mt-1"></div>
+            </div>
+
+            <div class="space-y-6 text-base font-['Archivo'] leading-relaxed">
+              <div class="space-y-4 text-white/80">
+                <p>
+                  <span class="font-bold text-white">PT Ansel Muda Berkarya</span> merupakan industri manufaktur kosmetik dan wewangian (fragrances) inovatif yang berkomitmen melahirkan produk kecantikan bermutu tinggi serta berstandar global.
+                </p>
+                <p>
+                  Mengusung semangat <i>"Muda Berkarya"</i>, kami memposisikan diri sebagai wadah dan inkubator bisnis terpercaya bagi generasi baru <i>beautypreneur</i> serta para pelaku usaha pemula. Kami percaya bahwa batasan modal dan fasilitas produksi tidak boleh menghentikan langkah kreativitas Anda untuk memiliki brand kosmetik mandiri yang legal dan berdaya saing.
+                </p>
+                <p>
+                  Seluruh alur produksi di fasilitas kami telah melewati sistem standardisasi ketat dan mengantongi legalitas resmi industri, yang mencakup sertifikasi <b>CPKB</b> (Cara Pembuatan Kosmetika yang Baik), jaminan <b>Halal</b>, serta izin edar resmi dari <b>BPOM</b> untuk menjamin mutu produk hingga ke tangan konsumen.
+                </p>
+              </div>
+
+              <!-- Vision & Mission -->
+              <div class="grid md:grid-cols-2 gap-6 py-4 border-y border-white/10">
+                <div class="space-y-2">
+                  <h3 class="text-lg font-bold text-white uppercase tracking-wider">Visi</h3>
+                  <p class="text-sm text-white/70 leading-relaxed italic">
+                    Menciptakan Industri kretifitas tanpa batas terutama dibidang wangi-wangian.                  </p>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="text-lg font-bold text-white uppercase tracking-wider">Misi</h3>
+                  <ul class="text-sm text-white/70 space-y-1 list-disc list-inside">
+                    <li>Penggunaan bahan baku alami indonesia</li>
+                    <li>Mengudakasi dan mengedukasi customer dalam berkreasi di bidang wangi-wangian.</li>
+                    <li>Menciptakan pemasaran global tanpa batas dan atau limitasi.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <p class="text-2xl font-bold">Sebuah Komitmen Integrasi</p>
+                <p class="text-lg text-white/80">
+                  Kami memadukan teknologi formulasi terkini dengan kemudahan birokrasi, memberikan jalan bagi Anda untuk fokus membesarkan nama brand tanpa perlu terbebani urusan teknis pendirian pabrik.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Sejarah Perusahaan & Statistik (Light Theme) -->
+    <section class="py-24 bg-white text-text-dark">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center uppercase tracking-tight">SEJARAH KAMI</h2>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div class="space-y-6 text-base text-text-muted leading-relaxed font-['Archivo']">
+            <h3 class="text-2xl font-bold uppercase text-text-dark">Latar Belakang & Nilai Historis</h3>
+            <p>
+              Perjalanan PT Ansel Muda Berkarya bermula dari sebuah gagasan sederhana untuk menjembatani jurang pemisah antara impian para kreator kosmetik muda dengan realita rumitnya akses ke pabrik manufaktur skala besar. Kami mengawali langkah kami dengan satu keyakinan: industri kecantikan Indonesia akan jauh lebih maju jika para perintis bisnis diberikan ruang produksi yang fleksibel.
+            </p>
+            <p>
+              Seiring berjalan waktu, kami terus berinvestasi memperbarui fasilitas produksi, meningkatkan standarisasi kebersihan ruang mixing, serta memperluas kapabilitas laboratorium R&D kami untuk mengadopsi kemajuan formulasi kosmetik global. 
+            </p>
+            <p>
+              Transformasi ini membawa kami tumbuh dari sekadar penyedia jasa maklon biasa menjadi mitra strategis hulu-ke-hilir yang mendampingi ratusan ide produk kosmetik, mentransformasikannya dari konsep abstrak di atas kertas menjadi produk ri nyata yang siap bersaing di pasar modern.
+            </p>
+          </div>
+          <div class="rounded-[40px] overflow-hidden aspect-[4/3] shadow-lg border border-gray-100">
+            <img src="/masnu.svg" alt="Sejarah PT Ansel Muda Berkarya" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-10 py-10 border-y border-gray-200">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-text-dark leading-none">2</div>
+            <p class="text-gray-500 mt-2 text-xs font-semibold tracking-wide uppercase">TAHUN PENGALAMAN</p>
+          </div>
+          <img src="/culik.svg" alt="separator" class="h-12 w-auto hidden sm:block" />
+          <div class="text-center">
+            <div class="text-4xl font-bold text-text-dark leading-none">20+</div>
+            <p class="text-gray-500 mt-2 text-xs font-semibold tracking-wide uppercase">BRAND PARTNER</p>
+          </div>
+          <img src="/culik.svg" alt="separator" class="h-12 w-auto hidden sm:block" />
+          <div class="text-center">
+            <div class="text-4xl font-bold text-text-dark leading-none">200+</div>
+            <p class="text-gray-500 mt-2 text-xs font-semibold tracking-wide uppercase">PROJECT SUKSES</p>
+          </div>
+        </div>
+
+        <p class="mt-16 text-base text-text-muted text-center leading-relaxed max-w-4xl mx-auto font-['Archivo']">
+          Kini, PT Ansel Muda Berkarya berdiri tegak sebagai salah satu mitra manufaktur strategis tepercaya di Indonesia yang siap melayani kebutuhan maklon produk kecantikan secara profesional. Bersama dedikasi dan komitmen mutu, kami terus membuka pintu kolaborasi selebar-lebarnya untuk mewujudkan brand kosmetik impian Anda.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<style>
+    .font-Archivo {
+        font-family: 'Archivo', sans-serif;
+    }
+</style>

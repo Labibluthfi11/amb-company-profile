@@ -1,11 +1,120 @@
 ---
 ---
-<section class="container mx-auto px-6 py-12 text-center space-y-6">
-  <h2 class="text-2xl font-sans font-bold text-text-dark">Kunjungi Sosial Media</h2>
-  <div class="flex justify-center gap-6 text-primary text-2xl">
-    <span>Instagram</span>
-    <span>Facebook</span>
-    <span>TikTok</span>
-    <span>YouTube</span>
+<section id="social-media-section" class="w-full overflow-hidden py-10 md:py-20 bg-white">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4">
+    
+    <!-- Left Hand (Instagram Link) -->
+    <div class="hand-left-container opacity-0 translate-x-[-50px] transition-all duration-1000 ease-out w-[280px] md:w-[320px] shrink-0">
+      <a href="https://www.instagram.com/ansel.manufacturing" target="_blank" class="block">
+        <div class="animate-float">
+          <img src="/kiri.svg" alt="Instagram Ansel" class="w-full h-auto drop-shadow-xl" />
+        </div>
+      </a>
+    </div>
+
+    <!-- Center Content -->
+    <div class="content-center-container opacity-0 translate-y-10 transition-all duration-1000 delay-300 flex-1 flex flex-col items-center text-center gap-6">
+      <div class="flex flex-col items-center gap-3">
+        <div class="flex items-center gap-2">
+          <span class="text-black text-lg md:text-xl font-semibold font-archivo">Sosial media kami</span>
+          <img src="/miring.svg" alt="arrow" class="w-4 h-4 md:w-5 md:h-5" style="filter: invert(31%) sepia(94%) saturate(2584%) hue-rotate(209deg) brightness(101%) contrast(106%);" />
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-archivo text-black leading-tight">
+          Kunjungi sosial media<br/>PT Ansel Muda Berkarya
+        </h2>
+        <p class="text-base md:text-lg font-archivo text-black/80 max-w-sm">
+          Temukan berbagai informasi tentang layanan, fasilitas, tren produk kosmetik, kiat bisnis & pemasaran, dan tips tentang kosmetik di media sosial kami.
+        </p>
+      </div>
+
+      <!-- Social Icons Grid -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/ansel.manufacturing" target="_blank" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl border border-black hover:border-primary hover:bg-primary group transition-all">
+          <img src="/instagram.svg" alt="Instagram" class="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:invert group-hover:brightness-200 transition-all" />
+        </a>
+        <a href="#" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl border border-black hover:border-primary hover:bg-primary group transition-all">
+          <img src="/facebook.svg" alt="Facebook" class="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:invert group-hover:brightness-200 transition-all" />
+        </a>
+        <a href="#" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl border border-black hover:border-primary hover:bg-primary group transition-all">
+          <img src="/threads.svg" alt="Threads" class="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:invert group-hover:brightness-200 transition-all" />
+        </a>
+        <a href="https://www.tiktok.com/@ansel.manufacturing" target="_blank" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl border border-black hover:border-primary hover:bg-primary group transition-all">
+          <img src="/tiktok.svg" alt="TikTok" class="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:invert group-hover:brightness-200 transition-all" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Hand (TikTok Link) -->
+    <div class="hand-right-container opacity-0 translate-x-[50px] transition-all duration-1000 ease-out w-[280px] md:w-[320px] shrink-0">
+      <a href="https://www.tiktok.com/@ansel.manufacturing" target="_blank" class="block">
+        <div class="animate-float-delayed">
+          <img src="/kanan.svg" alt="TikTok Ansel" class="w-full h-auto drop-shadow-xl" />
+        </div>
+      </a>
+    </div>
+
   </div>
 </section>
+
+<script>
+  function initSocialMediaAnimation() {
+    const section = document.getElementById('social-media-section');
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const handLeft = entry.target.querySelector('.hand-left-container') as HTMLElement;
+          const handRight = entry.target.querySelector('.hand-right-container') as HTMLElement;
+          const contentCenter = entry.target.querySelector('.content-center-container') as HTMLElement;
+
+          if (handLeft) {
+            handLeft.style.opacity = '1';
+            handLeft.style.transform = 'translateX(0)';
+          }
+          if (handRight) {
+            handRight.style.opacity = '1';
+            handRight.style.transform = 'translateX(0)';
+          }
+          if (contentCenter) {
+            contentCenter.style.opacity = '1';
+            contentCenter.style.transform = 'translateY(0)';
+          }
+          // Stop observing after animation triggers
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(section);
+  }
+
+  // Support for both normal load and Astro view transitions
+  document.addEventListener('DOMContentLoaded', initSocialMediaAnimation);
+  document.addEventListener('astro:after-swap', initSocialMediaAnimation);
+</script>
+
+<style>
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .hand-left-container:hover, .hand-right-container:hover {
+    filter: brightness(1.05);
+    transition: filter 0.3s ease;
+  }
+</style>
