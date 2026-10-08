@@ -9,3 +9,12 @@
   --font-sans: 'Archivo', sans-serif;
   --font-basic: 'Basic', sans-serif;
 }
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+.animate-fade-image {
+  animation: fade 15s infinite;
+}

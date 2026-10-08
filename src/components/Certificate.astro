@@ -3,17 +3,31 @@
     
     <!-- Content Section -->
     <div class="flex-1 flex flex-col gap-6">
-      <h2 class="text-3xl md:text-5xl font-bold font-archivo">SERTIFIKAT PT</h2>
+      <h2 class="text-3xl md:text-5xl font-bold font-archivo">STANDAR MUTU & LEGALITAS PABRIK MAKLON KOSMETIK</h2>
       <div class="space-y-4 text-justify text-lg md:text-xl font-archivo">
-        <p>PT Ansel Muda Berkarya adalah <i>industri dengan kreativitas tanpa batas di bidang wewangian (fragrances) dan kosmetik.</i> Kami menghadirkan solusi manufaktur yang autentik dan unik.</p>
-        <p><b>Perjalanan kami dimulai dari sebuah ide sederhana</b><br/>Untuk menjadi mitra terpercaya bagi brand yang ingin meluncurkan <i>produk kosmetik berkualitas tinggi tanpa perlu membangun pabrik sendiri.</i></p>
+        <p><b>PT Ansel Muda Berkarya</b> berkomitmen menghadirkan layanan <i>jasa maklon kosmetik, skincare, dan wewangian (fragrances)</i> yang aman, legal, serta terstandarisasi. Seluruh proses produksi kami di pabrik dikawal ketat oleh tenaga ahli profesional untuk memastikan kualitas produk terbaik bagi brand Anda.</p>
+        <p><b>Legalitas lengkap untuk kesuksesan brand Anda.</b><br/>Kami mengantongi berbagai sertifikasi resmi industri seperti standar <i>CPKB (Cara Pembuatan Kosmetika yang Baik) dan dukungan penuh registrasi BPOM serta kehalalan produk</i>, menjadikan kami mitra maklon terpercaya untuk mewujudkan produk impian Anda secara sah dan profesional.</p>
       </div>
     </div>
-
     <!-- Image Section -->
-    <div class="relative">
-      <img class="w-[300px] md:w-[399px] h-auto shadow-[0px_4px_54px_rgba(0,0,0,0.25)] rounded-2xl" src="sertifikat.svg" alt="Sertifikat" />
+    <div id="cert-container" class="relative w-fit cursor-pointer">
+      <img class="cert-img w-[250px] md:w-[350px] h-auto shadow-[0px_4px_54px_rgba(0,0,0,0.25)] rounded-2xl" src="halal.png" alt="Sertifikat 1" />
+      <img class="cert-img w-[250px] md:w-[350px] h-auto shadow-[0px_4px_54px_rgba(0,0,0,0.25)] rounded-2xl hidden" src="cpkb.png" alt="Sertifikat 2" />
     </div>
+
+<script>
+  const container = document.getElementById('cert-container');
+  if (container) {
+    const images = container.querySelectorAll('.cert-img');
+    let currentIndex = 0;
+
+    container.addEventListener('click', () => {
+      images[currentIndex].classList.add('hidden');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.remove('hidden');
+    });
+  }
+</script>
 
   </div>
 </section>
